@@ -4,16 +4,15 @@ import Home from './pages/Home';
 import SearchAppBar from './components/AppBar';
 import Tour from './pages/Tour'
 
-function App() {
+export default function App() {
   return (
   <BrowserRouter>
   <SearchAppBar />
   <Routes>
-    <Route path='/' element={<Home/>} />
-    <Route path='/:id' element={<Tour/>} />
+    <Route path="/tour/:id" element={<Tour />} />
+    <Route path="/" element={<Home />} />
   </Routes>
   </BrowserRouter>
   );
 }
 
-export default App;
